@@ -108,6 +108,8 @@ func fetchPrices(
 	if !end.IsZero() {
 		q.Set("end", end.Format(time.RFC3339))
 	}
+
+	// The data is licensed as CC BY 4.0 from Bundesnetzagentur | SMARD.de
 	u := url.URL{
 		Scheme:   "https",
 		Host:     "api.energy-charts.info",
