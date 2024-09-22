@@ -93,6 +93,7 @@ func handler(w http.ResponseWriter, _ *http.Request) {
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
+	w.Header().Add("Content-Type", "application/json")
 	w.Write(bytes)
 }
 
